@@ -1,8 +1,9 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[conference]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{tikz}
 \usepackage{cite}
 \usepackage[T1]{fontenc}
 \usepackage{times}
@@ -30,11 +31,23 @@
 	
 	\section{Introduction}
 	
+	% introduce LLMs but also acknowledge that they are based on human data
+	
 	The rapid advancements in large language models (LLMs) have unveiled their remarkable potential to revolutionize problem-solving and decision-making across various domains \cite{brown2020language, bommasani2021opportunities}. It is crucial, however, to acknowledge that the impressive achievements of LLMs are fundamentally rooted in human-curated knowledge. These models learn from vast amounts of human-generated data, indirectly absorbing and reflecting the collective human judgment of what constitutes a valuable idea based on its frequency and prominence within the training data.
+	
+	% the problem with relying on human judgement
 	
 	This reliance on human judgment raises a critical concern: What if human judgment itself is flawed or limited, leading to the overlooking of potentially transformative ideas? Human biases, cognitive limitations, and societal norms may contribute to the dismissal or underrepresentation of ideas that could hold significant potential for innovation and progress \cite{kahneman2011thinking, stanovich2000individual}. As a result, LLMs trained on such data may inherit these limitations \cite{bolukbasi2016man, caliskan2017semantics, bender2021dangers}, perpetuating a cycle of missed opportunities and stifled creativity.
 	
+	% structure the training data in another way, and learn in another way
+	
 	To address this challenge, we propose a novel approach that enhances the training data with a meta-cognitive layer. This layer, enriched with structured annotations and evaluations, enables the LLM to better understand the value and impact of ideas, thereby providing a framework for assessing information quality and relevance. Furthermore, we introduce idea-weighted learning, which prioritizes learning from the most valuable and informative ideas within the training data, thereby ensuring efficient and targeted knowledge acquisition.
+	
+	% here we should really introduce the first loop of retraining, where we utilize the training data
+	
+	Assuming that the enhanced training data really improves the ability to understand ideas and increases general intelligence. Then there is a potential for a self-improving loop, if the LLM is leveraged in reevaluating the data, it can train again on that data again. However, there might become a point where the underlying training data also needs to be updated, with new and better information. Thus we need to create another loop where new information is added to the system as well. 
+	
+	% this second self-improving loop is based on the following
 	
 	Building upon this foundation of enhanced training data, we introduce a self-improving AI framework. This framework is based on the principle that intelligence can be distilled into three core aspects: idea generation, categorization, and integration. By directly optimizing these aspects, the framework enhances the general intelligence of the AI, providing it with access to increasingly sophisticated ideas and enhancing its capacity to understand their value.
 	
@@ -87,7 +100,6 @@
 	
 	\section{Theoretical Framework}
 	
-	\subsection{Overview}
 	Our research aims to investigate the development of an increasingly autonomous and proficient AI system using a large language model (LLM) as its foundation. We hypothesize that by creating a self-reinforcing cycle of idea generation, categorization, and integration, the AI system will continuously improve its performance and capabilities over time \cite{silver2021reward, bostrom2017superintelligence}.
 	
 	The proposed framework consists of three key components: (1) idea generation, which involves the AI producing novel ideas and concepts; (2) idea categorization, which assesses the quality, relevance, and potential impact of the generated ideas; and (3) idea integration, which selectively incorporates the most promising ideas into the AI's knowledge base. These components work together in a synergistic manner, with each component's output serving as input for the others \cite{lake2017building, bengio2013representation}.
@@ -99,6 +111,8 @@
 	The first cycle, the "Idea Generation, Categorization, and Integration Cycle," focuses on the AI's ability to generate novel ideas, categorize them based on their quality and relevance, and integrate the most promising ones into its knowledge base. The second cycle, the "Training Data Labeling and Retraining Cycle," focuses on the AI's ability to improve its conceptual understanding and categorization skills through the labeling and retraining process.
 	
 	These two cycles operate in tandem, with each cycle building upon the improvements achieved in the other. As the AI generates, categorizes, and integrates higher-quality ideas (Cycle 1), it gains new insights that inform the labeling and retraining process (Cycle 2). Similarly, as the AI enhances its conceptual understanding and categorization skills through retraining (Cycle 2), it becomes better equipped to generate, categorize, and integrate ideas (Cycle 1) \cite{bostrom2017superintelligence, russell2019human}.
+	
+	\input{cycles.tex}
 	
 	The continuous interplay between these two cycles creates a virtuous feedback loop that drives the AI's self-improvement. With each iteration, the AI's knowledge base expands, its categorization skills sharpen, and its general intelligence increases, enabling it to tackle increasingly complex tasks and challenges \cite{chollet2019measure, silver2021reward}.
 	
